@@ -1,6 +1,6 @@
 # AXI4-VIP-env
 
-Environment to easily use AXI4-VIP on your AXI design.
+Environment to easily use AXI4-VIP on Xilinx Vivado tool, with your AXI design.
 
 Alows:
 - Verification of AXI4 Master IP
