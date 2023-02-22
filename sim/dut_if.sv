@@ -1,3 +1,4 @@
+`timescale 1ns / 1ps
 `include "../rtl/constants.svh"
 
 interface dut_if #

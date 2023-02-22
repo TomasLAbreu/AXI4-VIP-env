@@ -1,11 +1,8 @@
 `timescale 1ns / 1ps
 `include "../rtl/constants.svh"
 
-// `define `itf `DUT_PATH
-
 module tb_axi_vip();
   // Users to add ports here
-  // Inputs
   bit [31:0] rslv_base_waddr;
   bit [31:0] rslv_base_raddr;
   bit [31:0] rnum_burst;
@@ -31,20 +28,22 @@ module tb_axi_vip();
   bit clock;
   bit reset;
 
-  `WRAPPER DUT (
+  axi_vip_wrapper #(
+    .MP_AXI_ID_WIDTH     (`CONSTANT_AXI_ID_WIDTH),
+    .MP_AXI_ADDR_WIDTH   (`CONSTANT_AXI_ADDR_WIDTH),
+    .MP_AXI_DATA_WIDTH   (`CONSTANT_AXI_DATA_WIDTH),
+    .MP_AXI_AWUSER_WIDTH (`CONSTANT_AXI_AWUSER_WIDTH),
+    .MP_AXI_ARUSER_WIDTH (`CONSTANT_AXI_ARUSER_WIDTH),
+    .MP_AXI_WUSER_WIDTH  (`CONSTANT_AXI_WUSER_WIDTH),
+    .MP_AXI_RUSER_WIDTH  (`CONSTANT_AXI_RUSER_WIDTH),
+    .MP_AXI_BUSER_WIDTH  (`CONSTANT_AXI_BUSER_WIDTH)
+  ) DUT (
     .ACLK    (clock),
     .ARESETN (reset),
 
-    // Users to add ports here
-    // .m00_axi_slv_base_waddr (rslv_base_waddr),
-    // .m00_axi_slv_base_raddr (rslv_base_raddr),
-    // .m00_axi_num_burst      (rnum_burst),
-    // .m00_axi_burst_len      (rburst_len),
-    // .m00_axi_op_type        (ropt_type),
-
-    .iINIT_AXI_TXN   (init_0),
-    .oAXI_TXN_DONE       (done_0),
-    .oAXI_ERROR          (error_0)
+    .INIT_AXI_TXN (init_0),
+    .AXI_TXN_DONE (done_0),
+    .AXI_ERROR    (error_0)
     // User ports ends
   );
 
@@ -81,8 +80,8 @@ module tb_axi_vip();
     rslv_base_waddr <= 32'h80000000;
     rslv_base_raddr <= 32'h80000000;
 
-    rnum_burst <= 32'h00000001;
-    rburst_len <= 9'd8;
+    rnum_burst <= 32'h00000000;
+    rburst_len <= 9'd1;
     ropt_type  <= 1'b1;
   end
   // User drivers end
