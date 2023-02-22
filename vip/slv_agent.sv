@@ -1,18 +1,11 @@
 `timescale 1ns / 1ps
 `include "../rtl/constants.svh"
 
-// Automatically generated according to constants.svh
 import axi_vip_pkg::*;
-import axi_vip_axi_vip_0_0_pkg::*;
-// End of automatically generated data
+import my_axi_vip_pkg::*;
 
 module slv_agent;
-
-  // Automatically generated according to constants.svh
-  // `BD_NAME + _ + `VIP_INST_NAME + _0_slv_mem_t
-  axi_vip_axi_vip_0_0_slv_mem_t slv_agent_0;
-  // End of automatically generated data
-
+  axi_vip_slv_mem_t slv_agent_0;
   axi_monitor_transaction slv_monitor_transaction;
   axi_monitor_transaction slave_moniter_transaction_queue[$];
   xil_axi_uint            slave_moniter_transaction_queue_size =0;
@@ -20,7 +13,7 @@ module slv_agent;
 
   // Setup slave agent
   task setup();
-    slv_agent_0 = new("slave vip agent",DUT.`VIP_INST_NAME.inst.IF);
+    slv_agent_0 = new("slave vip agent",`VIP_ITF_PATH);
 
     slv_agent_0.vif_proxy.set_dummy_drive_type(XIL_AXI_VIF_DRIVE_NONE);
     slv_agent_0.set_agent_tag("Slave VIP");
