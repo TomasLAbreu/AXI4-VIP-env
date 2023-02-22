@@ -3,12 +3,12 @@ verilog xil_defaultlib \
 "../dut/axim4_full_v1_0.v"
 
 sv xil_defaultlib --include "../rtl" --include "../vip" \
-"../vip/axi_vip_axi_vip_0_0_pkg.sv" \
-"../vip/axi_vip_axi_vip_0_0.sv" \
+"../vip/axi_vip.sv" \
+"../vip/my_axi_vip_pkg.sv" \
 "../vip/slv_agent.sv"
 
-sv xil_defaultlib --include "../rtl" \
-"../rtl/top.sv"
+sv xil_defaultlib --include "../rtl" --include "../vip" \
+"../rtl/axi_vip_wrapper.sv"
 
 sv xil_defaultlib --include "../rtl" \
 "../sim/dut_if.sv" \

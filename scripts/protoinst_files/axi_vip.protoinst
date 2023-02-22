@@ -1,9 +1,9 @@
 {
 	"version": "1.0",
 	"modules": {
-		"axi_vip": {
+		"axi_vip_wrapper": {
 			"proto_instances": {
-				"/axi_vip_0/S_AXI": {
+				"/axi_vip_inst/S_AXI": {
 					"interface": "xilinx.com:interface:aximm:1.0",
 					"ports": {
 						"ACLK": { "actual": "aclk"},
@@ -50,7 +50,7 @@
 						"WVALID": { "actual": "s_axi_wvalid"}
 					}
 				},
-				"/axim4_full_0/M00_AXI": {
+				"/axi4_full_v1_0_inst/M00_AXI": {
 					"interface": "xilinx.com:interface:aximm:1.0",
 					"ports": {
 						"ACLK": { "actual": "m00_axi_aclk"},
