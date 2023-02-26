@@ -53,7 +53,7 @@ check_errors()
 
 clean()
 {
-  files_to_remove=(logs/* *jou *log .Xil/ xelab.* xsim* xvhdl* xvlog* run.log *.wdb)
+  files_to_remove=(logs/* WORK/ *jou *log .Xil/ xelab.* xsim* xvhdl* xvlog* run.log *.wdb)
 
   for (( i=0; i<${#files_to_remove[*]}; i++ )); do
     file="${files_to_remove[i]}"

@@ -1,6 +1,6 @@
 verilog xil_defaultlib ../dut/axim4_full_v1_0_M00_AXI.v
 sv xil_defaultlib --include "../rtl" --include "../rtl/vip" ../rtl/vip/axi_vip.sv ../rtl/vip/my_axi_vip_pkg.sv ../rtl/vip/slv_agent.sv
 sv xil_defaultlib --include "../rtl" --include "../rtl/vip" ../rtl/axi_vip_wrapper.sv
-sv xil_defaultlib --include "../rtl" ../sim/dut_if.sv ../sim/tb_axi_vip.sv
+sv xil_defaultlib --include "../rtl" ../sim/tb_axi_vip.sv
 verilog xil_defaultlib "glbl.v"
 nosort

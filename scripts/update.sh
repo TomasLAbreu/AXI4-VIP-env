@@ -20,7 +20,7 @@ dut_name=$(grep -oP '(?<=module ).*?(?=#)' $dut_files)
 
 vip_files="../rtl/vip/axi_vip.sv ../rtl/vip/my_axi_vip_pkg.sv ../rtl/vip/slv_agent.sv"
 top_files="../rtl/axi_vip_wrapper.sv"
-sim_files="../sim/dut_if.sv ../sim/tb_axi_vip.sv"
+sim_files="../sim/tb_axi_vip.sv"
 
 echo "[INFO   ] DUT is in $dut_files"
 echo "[INFO   ] DUT_M00_NAME is $dut_name"
