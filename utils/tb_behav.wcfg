@@ -46,51 +46,51 @@
    <wvobject type="group" fp_name="group96">
       <obj_property name="label">AW</obj_property>
       <obj_property name="DisplayName">label</obj_property>
-      <wvobject type="array" fp_name="/tb_axi_vip/DUT/axi4_full_v1_0_inst/axi4_full_v1_0_M00_AXI_inst/M_AXI_AWID">
+      <wvobject type="array" fp_name="/tb_axi_vip/DUT/inst/M_AXI_AWID">
          <obj_property name="ElementShortName">M_AXI_AWID[0:0]</obj_property>
          <obj_property name="ObjectShortName">M_AXI_AWID[0:0]</obj_property>
       </wvobject>
-      <wvobject type="array" fp_name="/tb_axi_vip/DUT/axi4_full_v1_0_inst/axi4_full_v1_0_M00_AXI_inst/M_AXI_AWADDR">
+      <wvobject type="array" fp_name="/tb_axi_vip/DUT/inst/M_AXI_AWADDR">
          <obj_property name="ElementShortName">M_AXI_AWADDR[34:0]</obj_property>
          <obj_property name="ObjectShortName">M_AXI_AWADDR[34:0]</obj_property>
       </wvobject>
-      <wvobject type="array" fp_name="/tb_axi_vip/DUT/axi4_full_v1_0_inst/axi4_full_v1_0_M00_AXI_inst/M_AXI_AWLEN">
+      <wvobject type="array" fp_name="/tb_axi_vip/DUT/inst/M_AXI_AWLEN">
          <obj_property name="ElementShortName">M_AXI_AWLEN[7:0]</obj_property>
          <obj_property name="ObjectShortName">M_AXI_AWLEN[7:0]</obj_property>
       </wvobject>
-      <wvobject type="array" fp_name="/tb_axi_vip/DUT/axi4_full_v1_0_inst/axi4_full_v1_0_M00_AXI_inst/M_AXI_AWSIZE">
+      <wvobject type="array" fp_name="/tb_axi_vip/DUT/inst/M_AXI_AWSIZE">
          <obj_property name="ElementShortName">M_AXI_AWSIZE[2:0]</obj_property>
          <obj_property name="ObjectShortName">M_AXI_AWSIZE[2:0]</obj_property>
       </wvobject>
-      <wvobject type="array" fp_name="/tb_axi_vip/DUT/axi4_full_v1_0_inst/axi4_full_v1_0_M00_AXI_inst/M_AXI_AWBURST">
+      <wvobject type="array" fp_name="/tb_axi_vip/DUT/inst/M_AXI_AWBURST">
          <obj_property name="ElementShortName">M_AXI_AWBURST[1:0]</obj_property>
          <obj_property name="ObjectShortName">M_AXI_AWBURST[1:0]</obj_property>
       </wvobject>
-      <wvobject type="logic" fp_name="/tb_axi_vip/DUT/axi4_full_v1_0_inst/axi4_full_v1_0_M00_AXI_inst/M_AXI_AWLOCK">
+      <wvobject type="logic" fp_name="/tb_axi_vip/DUT/inst/M_AXI_AWLOCK">
          <obj_property name="ElementShortName">M_AXI_AWLOCK</obj_property>
          <obj_property name="ObjectShortName">M_AXI_AWLOCK</obj_property>
       </wvobject>
-      <wvobject type="array" fp_name="/tb_axi_vip/DUT/axi4_full_v1_0_inst/axi4_full_v1_0_M00_AXI_inst/M_AXI_AWCACHE">
+      <wvobject type="array" fp_name="/tb_axi_vip/DUT/inst/M_AXI_AWCACHE">
          <obj_property name="ElementShortName">M_AXI_AWCACHE[3:0]</obj_property>
          <obj_property name="ObjectShortName">M_AXI_AWCACHE[3:0]</obj_property>
       </wvobject>
-      <wvobject type="array" fp_name="/tb_axi_vip/DUT/axi4_full_v1_0_inst/axi4_full_v1_0_M00_AXI_inst/M_AXI_AWPROT">
+      <wvobject type="array" fp_name="/tb_axi_vip/DUT/inst/M_AXI_AWPROT">
          <obj_property name="ElementShortName">M_AXI_AWPROT[2:0]</obj_property>
          <obj_property name="ObjectShortName">M_AXI_AWPROT[2:0]</obj_property>
       </wvobject>
-      <wvobject type="array" fp_name="/tb_axi_vip/DUT/axi4_full_v1_0_inst/axi4_full_v1_0_M00_AXI_inst/M_AXI_AWQOS">
+      <wvobject type="array" fp_name="/tb_axi_vip/DUT/inst/M_AXI_AWQOS">
          <obj_property name="ElementShortName">M_AXI_AWQOS[3:0]</obj_property>
          <obj_property name="ObjectShortName">M_AXI_AWQOS[3:0]</obj_property>
       </wvobject>
-      <wvobject type="array" fp_name="/tb_axi_vip/DUT/axi4_full_v1_0_inst/axi4_full_v1_0_M00_AXI_inst/M_AXI_AWUSER">
+      <wvobject type="array" fp_name="/tb_axi_vip/DUT/inst/M_AXI_AWUSER">
          <obj_property name="ElementShortName">M_AXI_AWUSER[-1:0]</obj_property>
          <obj_property name="ObjectShortName">M_AXI_AWUSER[-1:0]</obj_property>
       </wvobject>
-      <wvobject type="logic" fp_name="/tb_axi_vip/DUT/axi4_full_v1_0_inst/axi4_full_v1_0_M00_AXI_inst/M_AXI_AWVALID">
+      <wvobject type="logic" fp_name="/tb_axi_vip/DUT/inst/M_AXI_AWVALID">
          <obj_property name="ElementShortName">M_AXI_AWVALID</obj_property>
          <obj_property name="ObjectShortName">M_AXI_AWVALID</obj_property>
       </wvobject>
-      <wvobject type="logic" fp_name="/tb_axi_vip/DUT/axi4_full_v1_0_inst/axi4_full_v1_0_M00_AXI_inst/M_AXI_AWREADY">
+      <wvobject type="logic" fp_name="/tb_axi_vip/DUT/inst/M_AXI_AWREADY">
          <obj_property name="ElementShortName">M_AXI_AWREADY</obj_property>
          <obj_property name="ObjectShortName">M_AXI_AWREADY</obj_property>
       </wvobject>
@@ -98,27 +98,27 @@
    <wvobject type="group" fp_name="group97">
       <obj_property name="label">W</obj_property>
       <obj_property name="DisplayName">label</obj_property>
-      <wvobject type="array" fp_name="/tb_axi_vip/DUT/axi4_full_v1_0_inst/axi4_full_v1_0_M00_AXI_inst/M_AXI_WDATA">
+      <wvobject type="array" fp_name="/tb_axi_vip/DUT/inst/M_AXI_WDATA">
          <obj_property name="ElementShortName">M_AXI_WDATA[31:0]</obj_property>
          <obj_property name="ObjectShortName">M_AXI_WDATA[31:0]</obj_property>
       </wvobject>
-      <wvobject type="array" fp_name="/tb_axi_vip/DUT/axi4_full_v1_0_inst/axi4_full_v1_0_M00_AXI_inst/M_AXI_WSTRB">
+      <wvobject type="array" fp_name="/tb_axi_vip/DUT/inst/M_AXI_WSTRB">
          <obj_property name="ElementShortName">M_AXI_WSTRB[3:0]</obj_property>
          <obj_property name="ObjectShortName">M_AXI_WSTRB[3:0]</obj_property>
       </wvobject>
-      <wvobject type="logic" fp_name="/tb_axi_vip/DUT/axi4_full_v1_0_inst/axi4_full_v1_0_M00_AXI_inst/M_AXI_WLAST">
+      <wvobject type="logic" fp_name="/tb_axi_vip/DUT/inst/M_AXI_WLAST">
          <obj_property name="ElementShortName">M_AXI_WLAST</obj_property>
          <obj_property name="ObjectShortName">M_AXI_WLAST</obj_property>
       </wvobject>
-      <wvobject type="array" fp_name="/tb_axi_vip/DUT/axi4_full_v1_0_inst/axi4_full_v1_0_M00_AXI_inst/M_AXI_WUSER">
+      <wvobject type="array" fp_name="/tb_axi_vip/DUT/inst/M_AXI_WUSER">
          <obj_property name="ElementShortName">M_AXI_WUSER[-1:0]</obj_property>
          <obj_property name="ObjectShortName">M_AXI_WUSER[-1:0]</obj_property>
       </wvobject>
-      <wvobject type="logic" fp_name="/tb_axi_vip/DUT/axi4_full_v1_0_inst/axi4_full_v1_0_M00_AXI_inst/M_AXI_WVALID">
+      <wvobject type="logic" fp_name="/tb_axi_vip/DUT/inst/M_AXI_WVALID">
          <obj_property name="ElementShortName">M_AXI_WVALID</obj_property>
          <obj_property name="ObjectShortName">M_AXI_WVALID</obj_property>
       </wvobject>
-      <wvobject type="logic" fp_name="/tb_axi_vip/DUT/axi4_full_v1_0_inst/axi4_full_v1_0_M00_AXI_inst/M_AXI_WREADY">
+      <wvobject type="logic" fp_name="/tb_axi_vip/DUT/inst/M_AXI_WREADY">
          <obj_property name="ElementShortName">M_AXI_WREADY</obj_property>
          <obj_property name="ObjectShortName">M_AXI_WREADY</obj_property>
       </wvobject>
@@ -126,23 +126,23 @@
    <wvobject type="group" fp_name="group98">
       <obj_property name="label">B</obj_property>
       <obj_property name="DisplayName">label</obj_property>
-      <wvobject type="array" fp_name="/tb_axi_vip/DUT/axi4_full_v1_0_inst/axi4_full_v1_0_M00_AXI_inst/M_AXI_BID">
+      <wvobject type="array" fp_name="/tb_axi_vip/DUT/inst/M_AXI_BID">
          <obj_property name="ElementShortName">M_AXI_BID[0:0]</obj_property>
          <obj_property name="ObjectShortName">M_AXI_BID[0:0]</obj_property>
       </wvobject>
-      <wvobject type="array" fp_name="/tb_axi_vip/DUT/axi4_full_v1_0_inst/axi4_full_v1_0_M00_AXI_inst/M_AXI_BRESP">
+      <wvobject type="array" fp_name="/tb_axi_vip/DUT/inst/M_AXI_BRESP">
          <obj_property name="ElementShortName">M_AXI_BRESP[1:0]</obj_property>
          <obj_property name="ObjectShortName">M_AXI_BRESP[1:0]</obj_property>
       </wvobject>
-      <wvobject type="array" fp_name="/tb_axi_vip/DUT/axi4_full_v1_0_inst/axi4_full_v1_0_M00_AXI_inst/M_AXI_BUSER">
+      <wvobject type="array" fp_name="/tb_axi_vip/DUT/inst/M_AXI_BUSER">
          <obj_property name="ElementShortName">M_AXI_BUSER[-1:0]</obj_property>
          <obj_property name="ObjectShortName">M_AXI_BUSER[-1:0]</obj_property>
       </wvobject>
-      <wvobject type="logic" fp_name="/tb_axi_vip/DUT/axi4_full_v1_0_inst/axi4_full_v1_0_M00_AXI_inst/M_AXI_BVALID">
+      <wvobject type="logic" fp_name="/tb_axi_vip/DUT/inst/M_AXI_BVALID">
          <obj_property name="ElementShortName">M_AXI_BVALID</obj_property>
          <obj_property name="ObjectShortName">M_AXI_BVALID</obj_property>
       </wvobject>
-      <wvobject type="logic" fp_name="/tb_axi_vip/DUT/axi4_full_v1_0_inst/axi4_full_v1_0_M00_AXI_inst/M_AXI_BREADY">
+      <wvobject type="logic" fp_name="/tb_axi_vip/DUT/inst/M_AXI_BREADY">
          <obj_property name="ElementShortName">M_AXI_BREADY</obj_property>
          <obj_property name="ObjectShortName">M_AXI_BREADY</obj_property>
       </wvobject>
@@ -150,51 +150,51 @@
    <wvobject type="group" fp_name="group99">
       <obj_property name="label">AR</obj_property>
       <obj_property name="DisplayName">label</obj_property>
-      <wvobject type="array" fp_name="/tb_axi_vip/DUT/axi4_full_v1_0_inst/axi4_full_v1_0_M00_AXI_inst/M_AXI_ARID">
+      <wvobject type="array" fp_name="/tb_axi_vip/DUT/inst/M_AXI_ARID">
          <obj_property name="ElementShortName">M_AXI_ARID[0:0]</obj_property>
          <obj_property name="ObjectShortName">M_AXI_ARID[0:0]</obj_property>
       </wvobject>
-      <wvobject type="array" fp_name="/tb_axi_vip/DUT/axi4_full_v1_0_inst/axi4_full_v1_0_M00_AXI_inst/M_AXI_ARADDR">
+      <wvobject type="array" fp_name="/tb_axi_vip/DUT/inst/M_AXI_ARADDR">
          <obj_property name="ElementShortName">M_AXI_ARADDR[34:0]</obj_property>
          <obj_property name="ObjectShortName">M_AXI_ARADDR[34:0]</obj_property>
       </wvobject>
-      <wvobject type="array" fp_name="/tb_axi_vip/DUT/axi4_full_v1_0_inst/axi4_full_v1_0_M00_AXI_inst/M_AXI_ARLEN">
+      <wvobject type="array" fp_name="/tb_axi_vip/DUT/inst/M_AXI_ARLEN">
          <obj_property name="ElementShortName">M_AXI_ARLEN[7:0]</obj_property>
          <obj_property name="ObjectShortName">M_AXI_ARLEN[7:0]</obj_property>
       </wvobject>
-      <wvobject type="array" fp_name="/tb_axi_vip/DUT/axi4_full_v1_0_inst/axi4_full_v1_0_M00_AXI_inst/M_AXI_ARSIZE">
+      <wvobject type="array" fp_name="/tb_axi_vip/DUT/inst/M_AXI_ARSIZE">
          <obj_property name="ElementShortName">M_AXI_ARSIZE[2:0]</obj_property>
          <obj_property name="ObjectShortName">M_AXI_ARSIZE[2:0]</obj_property>
       </wvobject>
-      <wvobject type="array" fp_name="/tb_axi_vip/DUT/axi4_full_v1_0_inst/axi4_full_v1_0_M00_AXI_inst/M_AXI_ARBURST">
+      <wvobject type="array" fp_name="/tb_axi_vip/DUT/inst/M_AXI_ARBURST">
          <obj_property name="ElementShortName">M_AXI_ARBURST[1:0]</obj_property>
          <obj_property name="ObjectShortName">M_AXI_ARBURST[1:0]</obj_property>
       </wvobject>
-      <wvobject type="logic" fp_name="/tb_axi_vip/DUT/axi4_full_v1_0_inst/axi4_full_v1_0_M00_AXI_inst/M_AXI_ARLOCK">
+      <wvobject type="logic" fp_name="/tb_axi_vip/DUT/inst/M_AXI_ARLOCK">
          <obj_property name="ElementShortName">M_AXI_ARLOCK</obj_property>
          <obj_property name="ObjectShortName">M_AXI_ARLOCK</obj_property>
       </wvobject>
-      <wvobject type="array" fp_name="/tb_axi_vip/DUT/axi4_full_v1_0_inst/axi4_full_v1_0_M00_AXI_inst/M_AXI_ARCACHE">
+      <wvobject type="array" fp_name="/tb_axi_vip/DUT/inst/M_AXI_ARCACHE">
          <obj_property name="ElementShortName">M_AXI_ARCACHE[3:0]</obj_property>
          <obj_property name="ObjectShortName">M_AXI_ARCACHE[3:0]</obj_property>
       </wvobject>
-      <wvobject type="array" fp_name="/tb_axi_vip/DUT/axi4_full_v1_0_inst/axi4_full_v1_0_M00_AXI_inst/M_AXI_ARPROT">
+      <wvobject type="array" fp_name="/tb_axi_vip/DUT/inst/M_AXI_ARPROT">
          <obj_property name="ElementShortName">M_AXI_ARPROT[2:0]</obj_property>
          <obj_property name="ObjectShortName">M_AXI_ARPROT[2:0]</obj_property>
       </wvobject>
-      <wvobject type="array" fp_name="/tb_axi_vip/DUT/axi4_full_v1_0_inst/axi4_full_v1_0_M00_AXI_inst/M_AXI_ARQOS">
+      <wvobject type="array" fp_name="/tb_axi_vip/DUT/inst/M_AXI_ARQOS">
          <obj_property name="ElementShortName">M_AXI_ARQOS[3:0]</obj_property>
          <obj_property name="ObjectShortName">M_AXI_ARQOS[3:0]</obj_property>
       </wvobject>
-      <wvobject type="array" fp_name="/tb_axi_vip/DUT/axi4_full_v1_0_inst/axi4_full_v1_0_M00_AXI_inst/M_AXI_ARUSER">
+      <wvobject type="array" fp_name="/tb_axi_vip/DUT/inst/M_AXI_ARUSER">
          <obj_property name="ElementShortName">M_AXI_ARUSER[-1:0]</obj_property>
          <obj_property name="ObjectShortName">M_AXI_ARUSER[-1:0]</obj_property>
       </wvobject>
-      <wvobject type="logic" fp_name="/tb_axi_vip/DUT/axi4_full_v1_0_inst/axi4_full_v1_0_M00_AXI_inst/M_AXI_ARVALID">
+      <wvobject type="logic" fp_name="/tb_axi_vip/DUT/inst/M_AXI_ARVALID">
          <obj_property name="ElementShortName">M_AXI_ARVALID</obj_property>
          <obj_property name="ObjectShortName">M_AXI_ARVALID</obj_property>
       </wvobject>
-      <wvobject type="logic" fp_name="/tb_axi_vip/DUT/axi4_full_v1_0_inst/axi4_full_v1_0_M00_AXI_inst/M_AXI_ARREADY">
+      <wvobject type="logic" fp_name="/tb_axi_vip/DUT/inst/M_AXI_ARREADY">
          <obj_property name="ElementShortName">M_AXI_ARREADY</obj_property>
          <obj_property name="ObjectShortName">M_AXI_ARREADY</obj_property>
       </wvobject>
@@ -202,31 +202,31 @@
    <wvobject type="group" fp_name="group100">
       <obj_property name="label">R</obj_property>
       <obj_property name="DisplayName">label</obj_property>
-      <wvobject type="array" fp_name="/tb_axi_vip/DUT/axi4_full_v1_0_inst/axi4_full_v1_0_M00_AXI_inst/M_AXI_RID">
+      <wvobject type="array" fp_name="/tb_axi_vip/DUT/inst/M_AXI_RID">
          <obj_property name="ElementShortName">M_AXI_RID[0:0]</obj_property>
          <obj_property name="ObjectShortName">M_AXI_RID[0:0]</obj_property>
       </wvobject>
-      <wvobject type="array" fp_name="/tb_axi_vip/DUT/axi4_full_v1_0_inst/axi4_full_v1_0_M00_AXI_inst/M_AXI_RDATA">
+      <wvobject type="array" fp_name="/tb_axi_vip/DUT/inst/M_AXI_RDATA">
          <obj_property name="ElementShortName">M_AXI_RDATA[31:0]</obj_property>
          <obj_property name="ObjectShortName">M_AXI_RDATA[31:0]</obj_property>
       </wvobject>
-      <wvobject type="array" fp_name="/tb_axi_vip/DUT/axi4_full_v1_0_inst/axi4_full_v1_0_M00_AXI_inst/M_AXI_RRESP">
+      <wvobject type="array" fp_name="/tb_axi_vip/DUT/inst/M_AXI_RRESP">
          <obj_property name="ElementShortName">M_AXI_RRESP[1:0]</obj_property>
          <obj_property name="ObjectShortName">M_AXI_RRESP[1:0]</obj_property>
       </wvobject>
-      <wvobject type="logic" fp_name="/tb_axi_vip/DUT/axi4_full_v1_0_inst/axi4_full_v1_0_M00_AXI_inst/M_AXI_RLAST">
+      <wvobject type="logic" fp_name="/tb_axi_vip/DUT/inst/M_AXI_RLAST">
          <obj_property name="ElementShortName">M_AXI_RLAST</obj_property>
          <obj_property name="ObjectShortName">M_AXI_RLAST</obj_property>
       </wvobject>
-      <wvobject type="array" fp_name="/tb_axi_vip/DUT/axi4_full_v1_0_inst/axi4_full_v1_0_M00_AXI_inst/M_AXI_RUSER">
+      <wvobject type="array" fp_name="/tb_axi_vip/DUT/inst/M_AXI_RUSER">
          <obj_property name="ElementShortName">M_AXI_RUSER[-1:0]</obj_property>
          <obj_property name="ObjectShortName">M_AXI_RUSER[-1:0]</obj_property>
       </wvobject>
-      <wvobject type="logic" fp_name="/tb_axi_vip/DUT/axi4_full_v1_0_inst/axi4_full_v1_0_M00_AXI_inst/M_AXI_RVALID">
+      <wvobject type="logic" fp_name="/tb_axi_vip/DUT/inst/M_AXI_RVALID">
          <obj_property name="ElementShortName">M_AXI_RVALID</obj_property>
          <obj_property name="ObjectShortName">M_AXI_RVALID</obj_property>
       </wvobject>
-      <wvobject type="logic" fp_name="/tb_axi_vip/DUT/axi4_full_v1_0_inst/axi4_full_v1_0_M00_AXI_inst/M_AXI_RREADY">
+      <wvobject type="logic" fp_name="/tb_axi_vip/DUT/inst/M_AXI_RREADY">
          <obj_property name="ElementShortName">M_AXI_RREADY</obj_property>
          <obj_property name="ObjectShortName">M_AXI_RREADY</obj_property>
       </wvobject>
