@@ -125,5 +125,5 @@ xvlog.*
 
 ## checkpoint files
 *.dcp
-
+*.prj
 WORK/
