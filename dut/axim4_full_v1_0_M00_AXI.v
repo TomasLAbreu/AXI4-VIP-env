@@ -217,7 +217,7 @@ module axi4_full_v1_0_M00_AXI #
   // by burst_size_byte to point to the next address.
   always @(posedge M_AXI_ACLK) begin
     if (M_AXI_ARESETN == 0 || init_txn_pulse == 1'b1) begin
-      axi_awaddr <= 'b0;
+      axi_awaddr <= 32'b0;
     end else begin
       if (M_AXI_AWREADY && axi_awvalid) begin
         axi_awaddr <= axi_awaddr + burst_size_bytes;
