@@ -70,15 +70,7 @@ module axi_vip_wrapper #(
   wire                              rready;
 
   //////////// User to edit here
-  // User ports
-  // wire  werror;
-  // wire  wtxn_done;
-  // wire  winit_axi_txn;
 
-  // User I/O
-  // assign AXI_ERROR    = werror;
-  // assign AXI_TXN_DONE = wtxn_done;
-  // assign winit_axi_txn = INIT_AXI_TXN;
 
   //////////// DUT Instantiation
 
