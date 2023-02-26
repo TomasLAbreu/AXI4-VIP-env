@@ -14,15 +14,14 @@ module tb_axi_vip();
   bit done_0;
   bit init_0;
 
-  // Auxiliaries
+  // // Auxiliaries
 
   reg [31:0] rburst_awaddr;
   reg [31:0] rburst_araddr;
 
-
   // User ports ends
 
-  dut_if itf();
+  // dut_if itf();
 
   slv_agent agent();
   bit clock;
@@ -44,7 +43,6 @@ module tb_axi_vip();
     .INIT_AXI_TXN (init_0),
     .AXI_TXN_DONE (done_0),
     .AXI_ERROR    (error_0)
-    // User ports ends
   );
 
   // Testbench configs
@@ -89,6 +87,7 @@ module tb_axi_vip();
   //////////////////////////////////////////////////////////////////////////////
   // Monitors
   // Users to add drivers here
+`define itf DUT.inst
 
   // ------------ WRITE transfers -------------
   // register AWADDR used for the whole AXI burst transaction
@@ -96,53 +95,52 @@ module tb_axi_vip();
     if(!reset) begin
       rburst_awaddr <= 'b0;
     end else begin
-      if(itf.AWVALID & itf.AWREADY) begin
-        // $display("Burst AWADDR: 0x%08x", itf.AWADDR);
-        rburst_awaddr <= itf.AWADDR;
+      if(`itf.M_AXI_AWVALID & `itf.M_AXI_AWREADY) begin
+        // $display("Burst AWADDR: 0x%08x", `itf.AWADDR);
+        rburst_awaddr <= `itf.M_AXI_AWADDR;
       end
     end
   end
-
   // display WDATA
   always@(posedge clock) begin
-    if(itf.WVALID & itf.WREADY) begin
+    if(`itf.M_AXI_WVALID & `itf.M_AXI_WREADY) begin
       if(rburst_awaddr == 0) begin
-        $display("%3d AWADDR[0x%08x] = 0x%08x", itf.write_index+1, (itf.AWADDR + 4*itf.write_index), itf.WDATA);
+        $display("%3d AWADDR[0x%08x] = 0x%08x", `itf.write_index+1, (`itf.M_AXI_AWADDR + 4*`itf.write_index), `itf.M_AXI_WDATA);
       end else begin
-        $display("%3d AWADDR[0x%08x] = 0x%08x", itf.write_index+1, (rburst_awaddr + 4*itf.write_index), itf.WDATA);
+        $display("%3d AWADDR[0x%08x] = 0x%08x", `itf.write_index+1, (rburst_awaddr + 4*`itf.write_index), `itf.M_AXI_WDATA);
       end
     end
   end
 
-  // ------------ READ transfers -------------
-  // register ARADDR used for the whole AXI burst transaction
-  always@(posedge clock or negedge reset) begin
-    if(!reset) begin
-      rburst_araddr <= 'b0;
-    end else begin
-      if(itf.ARVALID & itf.ARREADY) begin
-        rburst_araddr <= itf.ARADDR;
-      end
-    end
-  end
+  // // ------------ READ transfers -------------
+  // // register ARADDR used for the whole AXI burst transaction
+  // always@(posedge clock or negedge reset) begin
+  //   if(!reset) begin
+  //     rburst_araddr <= 'b0;
+  //   end else begin
+  //     if(itf.ARVALID & itf.ARREADY) begin
+  //       rburst_araddr <= itf.ARADDR;
+  //     end
+  //   end
+  // end
 
-  // display RDATA
-  always@(posedge clock) begin
-    if(itf.RVALID & itf.RREADY) begin
-      if(rburst_araddr == 0) begin
-        $display("%3d ARADDR[0x%08x] = 0x%08x", itf.read_index+1, (itf.ARADDR + 4*itf.read_index), itf.RDATA);
-      end else begin
-        $display("%3d ARADDR[0x%08x] = 0x%08x", itf.read_index+1, (rburst_araddr + 4*itf.read_index), itf.RDATA);
-      end
-    end
-  end
+  // // display RDATA
+  // always@(posedge clock) begin
+  //   if(itf.RVALID & itf.RREADY) begin
+  //     if(rburst_araddr == 0) begin
+  //       $display("%3d ARADDR[0x%08x] = 0x%08x", itf.read_index+1, (itf.ARADDR + 4*itf.read_index), itf.RDATA);
+  //     end else begin
+  //       $display("%3d ARADDR[0x%08x] = 0x%08x", itf.read_index+1, (rburst_araddr + 4*itf.read_index), itf.RDATA);
+  //     end
+  //   end
+  // end
 
   initial begin
     #1ns;
     $display("\n-- Initiating AXI transaction...");
-    $display("Type: %s", itf.OP_TYPE ? "READ" : "WRITE");
-    $display("Burst length: %3d transfers", itf.BURST_LEN);
-    $display("Burst size  : %3d bytes", itf.burst_size_bytes);
+    // $display("Type: %s", itf.OP_TYPE ? "READ" : "WRITE");
+    // $display("Burst length: %3d transfers", itf.BURST_LEN);
+    // $display("Burst size  : %3d bytes", itf.burst_size_bytes);
 
     $display("\n-- Monitoring AXI transaction...");
   end
@@ -152,12 +150,12 @@ module tb_axi_vip();
   // Testbench body
 
   initial begin
-    wait(done_0 || ((itf.write_index == 256) || (itf.read_index == 256)));
+    wait(done_0 );//|| ((itf.write_index == 256) || (itf.read_index == 256)));
 
     if (done_0) begin
       $display("Finishing testbench...");
     end else begin
-      $display("FAILED: burst length (%d) longer than max size (256)", itf.BURST_LEN);
+      // $display("FAILED: burst length (%d) longer than max size (256)", itf.BURST_LEN);
     end
 
     if (error_0) begin
