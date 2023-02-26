@@ -19,7 +19,7 @@
 // THIS WAS AUTOMATICALLY GENERATED
 // DO NOT CHANGE THE FOLLOWING PARAMETERS
 
-`define DUT_M00_NAME     axi4_full_v1_0_M00_AXI 
+`define DUT_M00_NAME     axi4_full_v1_0_M00_AXI
 `define DUT_M00_INST     inst
 
 `define WRAPPER          axi_vip_wrapper
