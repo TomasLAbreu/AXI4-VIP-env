@@ -25,6 +25,7 @@ module axi_vip_wrapper #(
   wire  [MP_AXI_ID_WIDTH-1 : 0]     awid;
   wire  [MP_AXI_ADDR_WIDTH-1 : 0]   awaddr;
   wire  [7 : 0]                     awlen;
+  wire  [2 : 0]                     awsize;
   wire  [1 : 0]                     awburst;
   wire  [0 : 0]                     awlock;
   wire  [3 : 0]                     awcache;
@@ -50,6 +51,7 @@ module axi_vip_wrapper #(
   wire  [MP_AXI_ID_WIDTH-1 : 0]     arid;
   wire  [MP_AXI_ADDR_WIDTH-1 : 0]   araddr;
   wire  [7 : 0]                     arlen;
+  wire  [2 : 0]                     arsize;
   wire  [1 : 0]                     arburst;
   wire  [0 : 0]                     arlock;
   wire  [3 : 0]                     arcache;
@@ -69,81 +71,88 @@ module axi_vip_wrapper #(
 
   //////////// User to edit here
   // User ports
-  wire  werror;
-  wire  wtxn_done;
-  wire  winit_axi_txn;
+  // wire  werror;
+  // wire  wtxn_done;
+  // wire  winit_axi_txn;
 
   // User I/O
-  assign AXI_ERROR    = werror;
-  assign AXI_TXN_DONE = wtxn_done;
-  assign winit_axi_txn = INIT_AXI_TXN;
+  // assign AXI_ERROR    = werror;
+  // assign AXI_TXN_DONE = wtxn_done;
+  // assign winit_axi_txn = INIT_AXI_TXN;
 
-  `DUT_TOP_NAME #(
-    .C_M00_AXI_ADDR_WIDTH   (MP_AXI_ADDR_WIDTH),
-    .C_M00_AXI_DATA_WIDTH   (MP_AXI_DATA_WIDTH),
-    .C_M00_AXI_ID_WIDTH     (MP_AXI_ID_WIDTH),
-    .C_M00_AXI_AWUSER_WIDTH (MP_AXI_AWUSER_WIDTH),
-    .C_M00_AXI_ARUSER_WIDTH (MP_AXI_ARUSER_WIDTH),
-    .C_M00_AXI_WUSER_WIDTH  (MP_AXI_WUSER_WIDTH),
-    .C_M00_AXI_RUSER_WIDTH  (MP_AXI_RUSER_WIDTH),
-    .C_M00_AXI_BUSER_WIDTH  (MP_AXI_BUSER_WIDTH)
-  ) `DUT_TOP_INST (
+  //////////// DUT Instantiation
 
-    .m00_axi_init_axi_txn (winit_axi_txn),
-    .m00_axi_txn_done     (wtxn_done),
-    .m00_axi_error        (werror),
+  `DUT_M00_NAME #(
+    .C_M_AXI_ID_WIDTH     (MP_AXI_ID_WIDTH),
+    .C_M_AXI_ADDR_WIDTH   (MP_AXI_ADDR_WIDTH),
+    .C_M_AXI_DATA_WIDTH   (MP_AXI_DATA_WIDTH),
+    .C_M_AXI_AWUSER_WIDTH (MP_AXI_AWUSER_WIDTH),
+    .C_M_AXI_ARUSER_WIDTH (MP_AXI_ARUSER_WIDTH),
+    .C_M_AXI_WUSER_WIDTH  (MP_AXI_WUSER_WIDTH),
+    .C_M_AXI_RUSER_WIDTH  (MP_AXI_RUSER_WIDTH),
+    .C_M_AXI_BUSER_WIDTH  (MP_AXI_BUSER_WIDTH)
+  ) `DUT_M00_INST (
 
-    // .waxi_slv_base_waddr(0),
-    // .waxi_slv_base_raddr(0),
-    // .waxi_burst_len(9'b0),
-    // .waxi_num_burst(0),
-    // .waxi_op_type(2'b0),
-    //////////// User edit end
+    // User to add ports here
 
-    // AXI4Full Master Signals
-    .m00_axi_aclk    (ACLK),
-    .m00_axi_aresetn (ARESETN),
-    .m00_axi_araddr  (araddr),
-    .m00_axi_arburst (arburst),
-    .m00_axi_arcache (arcache),
-    .m00_axi_arid    (arid),
-    .m00_axi_arlen   (arlen),
-    .m00_axi_arlock  (arlock),
-    .m00_axi_arprot  (arprot),
-    .m00_axi_arqos   (arqos),
-    .m00_axi_arready (arready),
-    .m00_axi_aruser  (aruser),
-    .m00_axi_arvalid (arvalid),
-    .m00_axi_awaddr  (awaddr),
-    .m00_axi_awburst (awburst),
-    .m00_axi_awcache (awcache),
-    .m00_axi_awid    (awid),
-    .m00_axi_awlen   (awlen),
-    .m00_axi_awlock  (awlock),
-    .m00_axi_awprot  (awprot),
-    .m00_axi_awqos   (awqos),
-    .m00_axi_awready (awready),
-    .m00_axi_awuser  (awuser),
-    .m00_axi_awvalid (awvalid),
-    .m00_axi_bid     (bid),
-    .m00_axi_bready  (bready),
-    .m00_axi_bresp   (bresp),
-    .m00_axi_buser   (buser),
-    .m00_axi_bvalid  (bvalid),
-    .m00_axi_rdata   (rdata),
-    .m00_axi_rid     (rid),
-    .m00_axi_rlast   (rlast),
-    .m00_axi_rready  (rready),
-    .m00_axi_rresp   (rresp),
-    .m00_axi_ruser   (ruser),
-    .m00_axi_rvalid  (rvalid),
-    .m00_axi_wdata   (wdata),
-    .m00_axi_wlast   (wlast),
-    .m00_axi_wready  (wready),
-    .m00_axi_wstrb   (wstrb),
-    .m00_axi_wuser   (wuser),
-    .m00_axi_wvalid  (wvalid)
+    .INIT_AXI_TXN  (INIT_AXI_TXN),
+    .TXN_DONE      (AXI_TXN_DONE),
+    .ERROR         (AXI_ERROR),
+
+    // User ports end
+
+    .M_AXI_ACLK    (ACLK),
+    .M_AXI_ARESETN (ARESETN),
+
+    .M_AXI_AWID    (awid),
+    .M_AXI_AWADDR  (awaddr),
+    .M_AXI_AWLEN   (awlen),
+    .M_AXI_AWSIZE  (awsize),
+    .M_AXI_AWBURST (awburst),
+    .M_AXI_AWLOCK  (awlock),
+    .M_AXI_AWCACHE (awcache),
+    .M_AXI_AWPROT  (awprot),
+    .M_AXI_AWQOS   (awqos),
+    .M_AXI_AWUSER  (awuser),
+    .M_AXI_AWVALID (awvalid),
+    .M_AXI_AWREADY (awready),
+
+    .M_AXI_WDATA   (wdata),
+    .M_AXI_WSTRB   (wstrb),
+    .M_AXI_WLAST   (wlast),
+    .M_AXI_WUSER   (wuser),
+    .M_AXI_WVALID  (wvalid),
+    .M_AXI_WREADY  (wready),
+
+    .M_AXI_BID     (bid),
+    .M_AXI_BRESP   (bresp),
+    .M_AXI_BUSER   (buser),
+    .M_AXI_BVALID  (bvalid),
+    .M_AXI_BREADY  (bready),
+
+    .M_AXI_ARID    (arid),
+    .M_AXI_ARADDR  (araddr),
+    .M_AXI_ARLEN   (arlen),
+    .M_AXI_ARSIZE  (arsize),
+    .M_AXI_ARBURST (arburst),
+    .M_AXI_ARLOCK  (arlock),
+    .M_AXI_ARCACHE (arcache),
+    .M_AXI_ARPROT  (arprot),
+    .M_AXI_ARQOS   (arqos),
+    .M_AXI_ARUSER  (aruser),
+    .M_AXI_ARVALID (arvalid),
+    .M_AXI_ARREADY (arready),
+
+    .M_AXI_RID     (rid),
+    .M_AXI_RDATA   (rdata),
+    .M_AXI_RRESP   (rresp),
+    .M_AXI_RLAST   (rlast),
+    .M_AXI_RUSER   (ruser),
+    .M_AXI_RVALID  (rvalid),
+    .M_AXI_RREADY  (rready)
   );
+
+  //////////// AXI VIP Instantiation
 
   axi_vip #(
     .C_AXI_PROTOCOL        (0),
@@ -178,7 +187,8 @@ module axi_vip_wrapper #(
     .s_axi_awid     (awid),
     .s_axi_awaddr   (awaddr),
     .s_axi_awlen    (awlen),
-    .s_axi_awsize   (3'B0),
+    // .s_axi_awsize   (3'B0),
+    .s_axi_awsize   (awsize),
     .s_axi_awburst  (awburst),
     .s_axi_awlock   (awlock),
     .s_axi_awcache  (awcache),
@@ -206,7 +216,8 @@ module axi_vip_wrapper #(
     .s_axi_arid     (arid),
     .s_axi_araddr   (araddr),
     .s_axi_arlen    (arlen),
-    .s_axi_arsize   (3'B0),
+    // .s_axi_arsize   (3'B0),
+    .s_axi_arsize   (arsize),
     .s_axi_arburst  (arburst),
     .s_axi_arlock   (arlock),
     .s_axi_arcache  (arcache),
